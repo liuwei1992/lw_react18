@@ -1,8 +1,10 @@
-import { useTypeDispatch } from '@/hooks'
-import { addCountAction } from '@/store/modules/counter'
-import { memo, Suspense } from 'react'
+import { memo, Suspense, useEffect } from 'react'
 import type { ReactNode, FC } from 'react'
 import { Link, Outlet } from 'react-router-dom'
+
+import { useTypeDispatch } from '@/hooks'
+import { demoService } from '@/service'
+import { addCountAction } from '@/store/modules/counter'
 
 interface IProps {
   children?: ReactNode
@@ -10,6 +12,11 @@ interface IProps {
 
 const Demo: FC<IProps> = () => {
   const dispatch = useTypeDispatch()
+  useEffect(() => {
+    demoService.getDemoData().then((res) => {
+      console.log(res.data)
+    })
+  }, [])
   return (
     <div>
       Demo

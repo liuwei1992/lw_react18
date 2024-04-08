@@ -1,7 +1,7 @@
 {
-  "name": "music",
+  "name": "react_vite_ts_templete",
   "version": "1.0.0",
-  "description": "react-ts 模版项目",
+  "description": "react-vite-ts 模版项目",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
+    "axios": "^1.6.8",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
