@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "buildBeta": "tsc && vite build --mode beta",
+    "buildTest": "tsc && vite build --mode test",
     "preview": "vite preview",
     "prettier": "prettier --write ."
   },
